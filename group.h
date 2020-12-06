@@ -39,3 +39,4 @@ Group operator+(Group, Vector);
 Group operator-(Group, int);
 
 #endif
+

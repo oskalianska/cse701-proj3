@@ -1,2 +1,2 @@
-main.exe "data/minute_weather_transformed_normilized_spaces_small.csv" 8
+main.exe "data/minute_weather_normilized.txt" 8
 pause
