@@ -1,5 +1,12 @@
 # C++ project - K-means clustering 
 
+[1. Summary ](#1-summary)
+[2. Implementation Detais](#2-implementation-details)
+[3. Showcase](#3-showcase)
+[3.1 Main Dataset](#31-main-dataset)
+[3.2 Test Dataset](#32-test-dataset)
+[References](#references)
+
 ## 1. Summary 
 
 This project aims to implement a K-means clustering algorithm. K-means clustering is one of the popular unsupervised machine learning algorithms.
@@ -52,7 +59,7 @@ To run the program following command line arguments must be specified:
 
 The choice of a number of clusters entirely depends on you, and there is no right number that will always give you satisfactory results. Different quantities of groups lead to different clusters.
 
-### Main dataset
+### 3.1. Main Dataset
 
 The main data that I have used is `minute_weather_normilized.txt` in data folder.  It's a txt file with 60,000 rows, taken from Kaggle (https://www.kaggle.com/julianjose/minute-weather), which are normalized.
 
@@ -107,7 +114,7 @@ Cluster 7 centroid : -0.0670987 0.896968 -1.25994 -0.52566 -1.1098 -0.542727 -0.
 Cluster 8 centroid : -0.20279 -1.0114 0.556128 -0.277006 0.533018 -0.265704 1.20463 
 ```
 
-### Test Dataset
+### 3.2 Test Dataset
 
 Second dataset that can be used for testing purposes is `test_input.txt`. It is a set of random two-dimensional coordinates:
 
