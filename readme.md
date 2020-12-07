@@ -16,11 +16,11 @@ The final result is a set of clusters, where each group differs from the other g
 
 K-means algorithm in data mining starts with a first group of randomly selected centroids, which are used as the beginning points for every group, and then performs repetitive calculations to optimize the positions of the centroids.
 
-So, my main algorithm was:
+So, my main algorithm is:
 
 1. **Choose the number of clusters k**
 
-   The first step in k-means is to pick the number of clusters, k (user's choice).
+   The first step in K-means is to pick the number of clusters, k (user's choice).
 
 2. **Select k random points from the data as centroids**
 
@@ -50,15 +50,13 @@ To run the program following command line arguments must be specified:
 1. File name with data of you are working
 2. How many clusters you want to have in results (in our program minimum is 1 and maximum - 100)
 
-For example, if I want to use a K-means clustering on test_data.txt input file, creating 2 clusters the following command is required:
-
-`./main.exe "data/test_data.txt" 2`
-
 The choice of a number of clusters entirely depends on you, and there is no right number that will always give you satisfactory results. Different quantities of groups lead to different clusters.
 
-The main data that I have used is `minute_weather_normilized.txt`.  It's a txt file with 60,000 rows from Kaggle (https://www.kaggle.com/julianjose/minute-weather)
+### Main dataset
 
-The columns we are interested in clustering are: 
+The main data that I have used is `minute_weather_normilized.txt` in data folder.  It's a txt file with 60,000 rows, taken from Kaggle (https://www.kaggle.com/julianjose/minute-weather), which are normalized.
+
+The columns we used from the Kaggle dataset are: 
 `'air_pressure', 'air_temp', 'avg_wind_direction', 'avg_wind_speed','max_wind_direction',
  'max_wind_speed', 'relative_humidity'`
 
@@ -86,62 +84,12 @@ So, as example it can be:
 -1.470584283476086496e+00 8.022545123296653813e-02 -7.361629128508229147e-01 -3.601176287024053790e-01 -6.350032317183423869e-01 -3.992820737352082427e-01 3.658072531544943051e-01
 ```
 
-But if you want just to test and don't wait too long for the test run, you can use test_input.txt:
+If you want to use a K-means clustering on `minute_weather_normilized.txt` input file, creating 8 clusters the following command is required:
 
-```
-9 9
-1 1
--1 -1
-3 3
-10 10
--2 -2
-7 8
-0.2 0
--1 0
-6 10
-```
-In the `test_result.txt` you will find an example of out put result of the program. It will looks like:
+`./main.exe "data/minute_weather_normilized.txt" 8`
 
-```
-Data loaded successfully!
-Groups initialized = 8
-
-Starting K-Means Clustering algorithm..
-Iteration - 1/100
-Iteration - 2/100
-Iteration - 3/100
-Clustering finished in iteration : 3
-
-Vector IDs in group 1 : 4 
-
-Vector IDs in group 2 : 8 2 
-
-Vector IDs in group 3 : 5 
-
-Vector IDs in group 4 : 1 7 
-
-Vector IDs in group 5 : 10 
-
-Vector IDs in group 6 : 9 
-
-Vector IDs in group 7 : 3 
-
-Vector IDs in group 8 : 6 
-
-----------------------------
-
-Cluster 1 centroid : 3 3 
-Cluster 2 centroid : 0.6 0.5 
-Cluster 3 centroid : 10 10 
-Cluster 4 centroid : 8 8.5 
-Cluster 5 centroid : 6 10 
-Cluster 6 centroid : -1 0 
-Cluster 7 centroid : -1 -1 
-Cluster 8 centroid : -2 -2 
-
-```
-
-Regarding the full results, some of them are presented below:
+Regarding the full results, full result of running the program can be found in `results` folder. 
+Partial output of the program is presented below:
 
 ```
 Data loaded successfully!
@@ -159,13 +107,57 @@ Cluster 7 centroid : -0.0670987 0.896968 -1.25994 -0.52566 -1.1098 -0.542727 -0.
 Cluster 8 centroid : -0.20279 -1.0114 0.556128 -0.277006 0.533018 -0.265704 1.20463 
 ```
 
+### Test Dataset
+
+Second dataset that can be used for testing purposes is `test_input.txt`. It is a set of random two-dimensional coordinates:
+
+```
+9 9
+1 1
+-1 -1
+3 3
+10 10
+-2 -2
+7 8
+0.2 0
+-1 0
+6 10
+```
+File `test_result.txt` in results folder contains output of the program for test data.
+
+To run the program again for test data and save output to a file, following command can be used:
+`./main.exe "data/test_input.txt" 2 > results/test_result.txt`
+
+Results for test data are:
+
+```
+Data loaded successfully!
+Groups initialized = 2
+
+Starting K-Means Clustering algorithm..
+Iteration - 1/100
+Iteration - 2/100
+Iteration - 3/100
+Iteration - 4/100
+Clustering finished in iteration : 4
+
+Vector IDs in group 1 : 1 5 7 10 
+
+Vector IDs in group 2 : 8 3 6 9 2 4 
+
+----------------------------
+
+Cluster 1 centroid : 8 9.25 
+Cluster 2 centroid : 0.0333333 0.166667 
+```
+
 As you can see, K-means clustering is an extensively used technique for data cluster analysis. It is easy to understand and explain to others. Furthermore, it delivers results quickly. However, its performance is usually not as competitive as those of the other sophisticated clustering techniques because slight variations in the data could lead to high variance.
 
 ## References
 
-https://towardsdatascience.com/understanding-k-means-clustering-in-machine-learning-6a6e67336aa1
-https://www.analyticsvidhya.com/blog/2019/08/comprehensive-guide-k-means-clustering/
-https://stanford.edu/~cpiech/cs221/handouts/kmeans.html
-https://www.kaggle.com/julianjose/minute-weather
-https://www.datasciencecentral.com/profiles/blogs/steps-to-calculate-centroids-in-cluster-using-k-means-clustering
-https://blogs.oracle.com/datascience/introduction-to-k-means-clustering
+1. https://towardsdatascience.com/understanding-k-means-clustering-in-machine-learning-6a6e67336aa1
+1. https://www.analyticsvidhya.com/blog/2019/08/comprehensive-guide-k-means-clustering/
+1. https://stanford.edu/~cpiech/cs221/handouts/kmeans.html
+1. https://www.kaggle.com/julianjose/minute-weather
+1. https://www.datasciencecentral.com/profiles/blogs/steps-to-calculate-centroids-in-cluster-using-k-means-clustering
+1. https://blogs.oracle.com/datascience/introduction-to-k-means-clustering
