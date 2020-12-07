@@ -9,15 +9,9 @@
 
 ## 1. Summary 
 
-This project aims to implement a K-means clustering algorithm. K-means clustering is one of the popular unsupervised machine learning algorithms.
+This project aims to implement a K-means clustering algorithm. K-means clustering is one of the popular unsupervised machine learning algorithms. This algorithm identifies the k number of centroids and then allocates every data point to the nearest cluster while keeping them as small as possible. The ‘means’ in the K-means refers to averaging the data, finding the centroid.
 
-This algorithm identifies the k number of centroids and then allocates every data point to the nearest cluster while keeping them as small as possible.
-
-The ‘means’ in the K-means refers to averaging the data, finding the centroid.
-
-In this project, I will use cluster analysis to generate a big picture model of the weather at a local station using minute-granularity data.
-
-The final result is a set of clusters, where each group differs from the other group, and the items inside each group are similar. 
+In this project, I will use cluster analysis to generate a big picture model of the weather at a local station using minute-granularity data. The final result is a set of clusters, where each group differs from the other group, and the items inside each group are similar. 
 
 ## 2. Implementation details
 
