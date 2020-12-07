@@ -18,28 +18,28 @@ K-means algorithm in data mining starts with a first group of randomly selected 
 
 So, my main algorithm was:
 
-**1. Choose the number of clusters k**
+1. **Choose the number of clusters k**
 
-The first step in k-means is to pick the number of clusters, k (user's choice).
+   The first step in k-means is to pick the number of clusters, k (user's choice).
 
-**2. Select k random points from the data as centroids**
+2. **Select k random points from the data as centroids**
 
-The program randomly selects the centroid for each group
+   The program randomly selects the centroid for each group
 
-**3. Assign all the points to the closest cluster centroid**
+3. **Assign all the points to the closest cluster centroid**
 
-Once the program has initialized the centroids, it assigns each point to the closest cluster centroid.  The distance between centroid and point has been computed based on the straight line's length drawn between them. This is commonly referred to as the Euclidean distance. The most common definition is with Euclidean distance, minimizing the Sum of Squared Error (SSE) function
+   Once the program has initialized the centroids, it assigns each point to the closest cluster centroid.  The distance between centroid and point has been computed based on the straight line's length drawn between them. This is commonly referred to as the Euclidean distance. The most common definition is with Euclidean distance, minimizing the Sum of Squared Error (SSE) function
 
-**4. Recompute the centroids of newly formed clusters**
+4. **Recompute the centroids of newly formed clusters**
 
-It has assigned all of the points to either cluster. The next step is to compute the centroids of newly formed clusters. So, program calculates the mean values of the clusters created and the new centroid values will these mean values and centroid is moved 
+   It has assigned all of the points to either cluster. The next step is to compute the centroids of newly formed clusters. So, program calculates the mean values of the clusters created and the new centroid values will these mean values and centroid is moved 
 
-**5. Repeat steps 3 and 4**
+5. **Repeat steps 3 and 4**
 
-This process has to be repeated until we find a constant value for centroids and the latest cluster will be considered as the final cluster solution. So here are stopping criteria:
+   This process has to be repeated until we find a constant value for centroids and the latest cluster will be considered as the final cluster solution. So here are stopping criteria:
 
-- Points remain in the same group;
-- Maximum number of iterations are reached (maximum 100 in my program)
+   - Points remain in the same group;
+   - Maximum number of iterations are reached (maximum 100 in my program)
 
 The algorithm described above finds the clusters and data set labels for a particular pre-chosen K. To find the number of clusters in the data, the user needs to run the K-means clustering algorithm for a range of K values and compare the results. In general, there is no method for determining exact value of K.
 
