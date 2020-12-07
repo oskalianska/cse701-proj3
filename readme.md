@@ -1,11 +1,11 @@
 # C++ project - K-means clustering 
 
-[1. Summary ](#1-summary)
-[2. Implementation Detais](#2-implementation-details)
-[3. Showcase](#3-showcase)
-[3.1 Main Dataset](#31-main-dataset)
-[3.2 Test Dataset](#32-test-dataset)
-[References](#references)
+1. [Summary](#1-summary)
+2. [Implementation Detais](#2-implementation-details)
+3. [Showcase](#3-showcase)
+    3.1. [Main Dataset](#31-main-dataset)
+    3.2. [Test Dataset](#32-test-dataset)
+4. [References](#references)
 
 ## 1. Summary 
 
