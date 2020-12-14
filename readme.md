@@ -151,14 +151,15 @@ Vector IDs in group 2 : 8 3 6 9 2 4
 Cluster 1 centroid : 8 9.25 
 Cluster 2 centroid : 0.0333333 0.166667 
 ```
+Probably it's hard to understand lots of numbers and how our clusters look like. So, for this reason, I added some visualizations of our results that were created in Python. 
 
-...
-
-![](results/images/test_results.jpg)
+This picture shows us just two clusters that were created based on our data:
 
 ![](results/images/test_results_no_centroid.jpg)
 
-...
+The next picture shows the same clusters but with the final position of centroids:
+
+![](results/images/test_results.jpg)
 
 As you can see, K-means clustering is an extensively used technique for data cluster analysis. It is easy to understand and explain to others. Furthermore, it delivers results quickly. However, its performance is usually not as competitive as those of the other sophisticated clustering techniques because slight variations in the data could lead to high variance.
 
