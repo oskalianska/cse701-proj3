@@ -8,7 +8,6 @@ Group::Group(int groupId, Vector centroid)
 {
     if (groupId < AppConstants::MIN_GROUPS || groupId > AppConstants::MAX_GROUPS)
     {
-        print<string>("Group number is invalid");
         throw BadGroupException();
     }
     this->groupId = groupId;

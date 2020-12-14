@@ -8,7 +8,6 @@ vector<Vector> DataLoader::load(int argc, char **argv, long long unsigned int &K
     //Need 2 arguments (except filename) to run, else exit
     if(argc != 3)
 	{
-        print<string>("Number of arguments is wrong.");
         throw std::invalid_argument("Program requires two arguments.");
     }
 
@@ -22,7 +21,6 @@ vector<Vector> DataLoader::load(int argc, char **argv, long long unsigned int &K
 
     if(!infile.is_open())
 	{
-        print<string>("Can't open file.");
         throw std::runtime_error("Unable to open file.");
     }
 
@@ -44,13 +42,11 @@ vector<Vector> DataLoader::load(int argc, char **argv, long long unsigned int &K
     //Return if number of groups > number of points
     if(all_vectors.size() < K)
 	{
-        print<string>("Number of groups greater than number of vectors.");
         throw std::invalid_argument("Number of groups greater than number of vectors.");
     }
 
     if(all_vectors.size() == 0)
 	{
-        print<string>("File is empty.");
         throw std::invalid_argument("File does not contain any data.");
     }
 
@@ -59,7 +55,6 @@ vector<Vector> DataLoader::load(int argc, char **argv, long long unsigned int &K
 
     if (!all_of(all_vectors.begin(), all_vectors.end(), [dim](Vector p) { return p.getDim() == dim; } ))
     {
-        print<string>("All vectors must have same dimensions");
         throw std::invalid_argument("Input vectors have different dimentions");
     }
 

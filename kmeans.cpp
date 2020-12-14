@@ -81,10 +81,18 @@ void KMeans::run(vector<Vector>& all_data)
     {
         cout<<"Iteration - "<<iteration<<"/"<<iterations<<endl;
         bool done = true;
+        double percentComlete = 0;
 
         // Add all points to their nearest cluster
         for(int i = 0; i < vectors_count; i++)
         {
+            double newPercentComplete = round(i*1.0/vectors_count*100);
+            if (newPercentComplete != percentComlete)
+            {
+                percentComlete = newPercentComplete;
+                cout << percentComlete << "% of iteration complete" <<endl;
+            }
+
             int currentGroupId = all_data[i].getGroup();
             int nearestGroupId = getNearestGroupId(all_data[i]);
 

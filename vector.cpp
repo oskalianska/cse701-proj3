@@ -41,7 +41,6 @@ void Vector::setGroup(int val)
 {
     if (val < AppConstants::MIN_GROUPS || val > AppConstants::MAX_GROUPS)
     {
-        print<string>("Group number is invalid");
         throw BadGroupException();
     }
 
