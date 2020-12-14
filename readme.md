@@ -152,6 +152,14 @@ Cluster 1 centroid : 8 9.25
 Cluster 2 centroid : 0.0333333 0.166667 
 ```
 
+...
+
+![](results/images/test_results.jpg)
+
+![](results/images/test_results_no_centroid.jpg)
+
+...
+
 As you can see, K-means clustering is an extensively used technique for data cluster analysis. It is easy to understand and explain to others. Furthermore, it delivers results quickly. However, its performance is usually not as competitive as those of the other sophisticated clustering techniques because slight variations in the data could lead to high variance.
 
 ## References
